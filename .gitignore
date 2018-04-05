@@ -4,3 +4,4 @@ lib
 node_modules/
 .Python
 yarn-error.log
+src/deep-learning/data/
