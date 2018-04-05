@@ -1,5 +1,6 @@
-bin/
-include/
-lib/
+bin
+include
+lib
 node_modules/
-.Python/
+.Python
+yarn-error.log
