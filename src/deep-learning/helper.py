@@ -8,3 +8,6 @@ wordsList = [word.decode('UTF-8') for word in wordsList]
 
 wordVectors = np.load('/Users/nicbonetto/npm-packages/smart-sentiment/src/deep-learning/data/training_data/wordVectors.npy')
 print('Loaded word vectors.')
+
+ids = np.load('/Users/nicbonetto/npm-packages/smart-sentiment/src/deep-learning/data/training_data/idsMatrix.npy')
+print('Loaded IDs.')
