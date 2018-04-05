@@ -1,4 +1,8 @@
 import numpy as np
+from random import randint
+
+maxSeqLength = 250
+batchSize = 24
 
 wordsList = np.load('/Users/nicbonetto/npm-packages/smart-sentiment/src/deep-learning/data/training_data/wordsList.npy')
 print('Loaded the word list.')
@@ -11,3 +15,18 @@ print('Loaded word vectors.')
 
 ids = np.load('/Users/nicbonetto/npm-packages/smart-sentiment/src/deep-learning/data/training_data/idsMatrix.npy')
 print('Loaded IDs.')
+
+def getTrainBatch():
+  labels = []
+  arr = np.zeros[batchSize, maxSeqLength]
+
+  for i in range(batchSize):
+    if (i % 2 == 0):
+      num = randint(1, 11499)
+      labels.append([1, 0])
+    else:
+      num = randint(13499, 24999)
+    
+    arr[i] = ids[num-1:num]
+
+  return arr, labels
