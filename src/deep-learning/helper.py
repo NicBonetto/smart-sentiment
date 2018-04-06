@@ -4,6 +4,9 @@ import os
 
 maxSeqLength = 250
 batchSize = 24
+lstmUnits = 64
+numClasses = 2
+iterations = 100000
 
 wordsList = np.load(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data/training_data/wordsList.npy'))
 print('Loaded the word list.')
