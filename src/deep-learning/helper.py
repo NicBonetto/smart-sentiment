@@ -1,19 +1,20 @@
 import numpy as np
 from random import randint
+import os
 
 maxSeqLength = 250
 batchSize = 24
 
-wordsList = np.load('/Users/nicbonetto/npm-packages/smart-sentiment/src/deep-learning/data/training_data/wordsList.npy')
+wordsList = np.load(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data/training_data/wordsList.npy'))
 print('Loaded the word list.')
 
 wordsList = wordsList.tolist()
 wordsList = [word.decode('UTF-8') for word in wordsList]
 
-wordVectors = np.load('/Users/nicbonetto/npm-packages/smart-sentiment/src/deep-learning/data/training_data/wordVectors.npy')
+wordVectors = np.load(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data/training_data/wordVectors.npy'))
 print('Loaded word vectors.')
 
-ids = np.load('/Users/nicbonetto/npm-packages/smart-sentiment/src/deep-learning/data/training_data/idsMatrix.npy')
+ids = np.load(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data/training_data/idsMatrix.npy'))
 print('Loaded IDs.')
 
 def getTrainBatch():
